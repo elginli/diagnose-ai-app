@@ -11,11 +11,11 @@ export default defineSchema({
     }).index("by_clerk_id", ["clerkId"]),
 
     plans: defineTable({
-        userId: v.id("users"),
+        userId: v.string(),
         name: v.string(),
         prescriptionPlan: v.object({
             schedule: v.array(v.string()),
-            medication: v.array(v.object({
+            medications: v.array(v.object({
                 day: v.string(),
                 routines: v.array(v.object({
                     name: v.string(),

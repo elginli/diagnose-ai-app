@@ -34,7 +34,7 @@ const Navbar = () => {
                             </Link>
 
                             <Link
-                                href="/generate-plan"
+                                href="/generate-program"
                                 className="flex items-center gap-1.5 text-sm hover:text-primary transition-colors"
                             >
                                 <BriefcaseMedical size={16} />
@@ -54,7 +54,7 @@ const Navbar = () => {
                                 variant="outline"
                                 className="ml-2 border-primary/50 text-primary hover:text-white hover:bg-primary/10"
                             >
-                                <Link href="/generate-plan">Get Started</Link>
+                                <Link href="/generate-program">Get Started</Link>
                             </Button>
 
                             <UserButton />
