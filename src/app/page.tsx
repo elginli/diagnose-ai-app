@@ -86,12 +86,12 @@ const HomePage = () => {
               <div className="relative aspect-square max-w-lg mx-auto">
                 <div className="relative overflow-hidden rounded-lg bg-cyber-black">
                   <img
-                    src="/doctor_ai_facing_left.png"
+                    src="/main_page_doctor.png"
                     alt="AI Doctor"
                     className="size-full object-cover object-center"
                   />
 
-                  <div className="absolute inset-0 bg-gradient-to-t from-background via-background/40 to-transparent" />
+                  
                 </div>
 
                 {/* terminal overlay */}

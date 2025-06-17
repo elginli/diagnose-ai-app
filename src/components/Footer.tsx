@@ -1,4 +1,4 @@
-import { ZapIcon } from "lucide-react";
+import { ZapIcon, ScanEye } from "lucide-react";
 import Link from "next/link";
 
 const Footer = () => {
@@ -13,7 +13,7 @@ const Footer = () => {
           <div className="flex flex-col items-center md:items-start gap-2">
             <Link href="/" className="flex items-center gap-2">
               <div className="p-1 bg-primary/10 rounded">
-                <ZapIcon className="w-4 h-4 text-primary" />
+                <ScanEye className="w-4 h-4 text-primary" />
               </div>
               <span className="text-xl font-bold font-mono">
                 medi<span className="text-primary">scan</span>.ai
@@ -43,24 +43,6 @@ const Footer = () => {
               className="text-muted-foreground hover:text-primary transition-colors"
             >
               Privacy
-            </Link>
-            <Link
-              href="/contact"
-              className="text-muted-foreground hover:text-primary transition-colors"
-            >
-              Contact
-            </Link>
-            <Link
-              href="/blog"
-              className="text-muted-foreground hover:text-primary transition-colors"
-            >
-              Blog
-            </Link>
-            <Link
-              href="/help"
-              className="text-muted-foreground hover:text-primary transition-colors"
-            >
-              Help
             </Link>
           </div>
 

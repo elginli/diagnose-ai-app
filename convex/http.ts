@@ -66,8 +66,27 @@ http.route({
             }
         }
 
+        if (eventType === "user.updated"){
+            const {id, first_name, last_name, image_url, email_addresses} = evt.data;
+            const email =email_addresses[0].email_address;
+            const name = `${first_name || ""} ${last_name || ""}`.trim();
+            
+            try{
+                await ctx.runMutation(api.users.updateUser, {
+                    email,
+                    name,
+                    image: image_url,
+                    clerkId: id
+                });   
+            } catch (error) {
+                console.log("error updating user: error");
+                return new Response("Error creating user", {status: 500});
+            }
+        }
+
         return new Response("Webhooks processed successfully", { status: 200});
     }),
+
     
 });
 
@@ -133,6 +152,7 @@ http.route({
             Your objective:
             - Design a safe and effective medical treatment schedule tailored to the patient's physical characteristics and reported symptoms.
             - Avoid prescribing excessive medications or multiple interventions on the same or consecutive days unless clinically necessary.
+            - Ensure the medication is common and can be retrieved from common drug stores.
             - Ensure that the plan respects reasonable rest intervals and avoids harmful drug interactions or overload.
             - The medication or routine should clearly align with the symptoms provided (e.g., "fatigue" might lead to iron supplementation, not painkillers).
             - Be conservative for sensitive groups (e.g., elderly or underweight) and aggressive for acute, high-risk symptoms if age and weight allow.

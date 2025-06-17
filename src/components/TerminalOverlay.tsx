@@ -5,8 +5,8 @@ const TerminalOverlay = () => {
         {/* Status bar */}
         <div className="flex items-center justify-between mb-2 border-b border-border pb-1">
           <div className="flex items-center gap-2">
-            <div className="w-2 h-2 rounded-full bg-primary animate-pulse"></div>
-            <p className="text-xs text-primary">SYSTEM ACTIVE</p>
+            <div className="w-2 h-2 rounded-full bg-green-500 animate-pulse"></div>
+            <p className="text-xs text-green-500">SYSTEM ACTIVE</p>
           </div>
           <p className="text-xs text-muted-foreground">ID:78412.93</p>
         </div>
@@ -33,4 +33,5 @@ const TerminalOverlay = () => {
     </div>
   );
 };
+
 export default TerminalOverlay;

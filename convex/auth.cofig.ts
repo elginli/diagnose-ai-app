@@ -2,7 +2,7 @@
 export default {
   providers: [
     {
-      domain: "https://intent-shark-30.clerk.accounts.dev/",
+      domain: process.env.CLERK_FRONTEND_API_URL,
       applicationID: "convex",
     },
   ]

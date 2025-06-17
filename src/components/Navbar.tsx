@@ -1,7 +1,7 @@
 "use client";
 
 import { SignInButton, SignUpButton, UserButton, useUser } from '@clerk/nextjs';
-import { UserIcon, BriefcaseMedical, HomeIcon, ZapIcon } from 'lucide-react';
+import { UserIcon, BriefcaseMedical, HomeIcon, ZapIcon, ScanEye } from 'lucide-react';
 import Link from "next/link";
 import { Button } from "./ui/button";
 
@@ -14,7 +14,7 @@ const Navbar = () => {
                 {/* LOGO */}
                 <Link href="/" className="flex items-center gap-2">
                     <div className="p-1 bg-primary/10 rounded">
-                        <ZapIcon className="w-4 h-4 text-primary" />
+                        <ScanEye className="w-4 h-4 text-primary" />
                     </div>
                     <span className="text-xl font-bold font-mono">
                         medi<span className="text-primary">scan</span>.ai
