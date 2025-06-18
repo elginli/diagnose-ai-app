@@ -1,7 +1,7 @@
 "use client";
 
 import { SignInButton, SignUpButton, UserButton, useUser } from '@clerk/nextjs';
-import { UserIcon, BriefcaseMedical, HomeIcon, ZapIcon, ScanEye } from 'lucide-react';
+import { UserIcon, BriefcaseMedical, HomeIcon, ScanEye } from 'lucide-react';
 import Link from "next/link";
 import { Button } from "./ui/button";
 

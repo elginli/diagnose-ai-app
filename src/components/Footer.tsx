@@ -1,4 +1,4 @@
-import { ZapIcon, ScanEye } from "lucide-react";
+import { ScanEye } from "lucide-react";
 import Link from "next/link";
 
 const Footer = () => {
